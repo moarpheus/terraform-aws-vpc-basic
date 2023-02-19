@@ -1,11 +1,23 @@
-variable "name" {
+variable "vpc_name" {
   description = "Name tag for VPC"
   type        = string
-  default     = ""
+  default     = "main"
 }
 
-variable "cidr" {
+variable "vpc_cidr" {
   description = "The IPv4 CIDR block for the VPC"
   type        = string
   default     = "10.0.0.0/16"
+}
+
+variable "enable_dns_hostnames" {
+  description = "Enables DNS hosntnames for the VPC"
+  type        = boolean
+  default     = true
+}
+
+variable "enable_dns_support" {
+  description = "Enables DNS support for the VPC"
+  type        = boolean
+  default     = true
 }
