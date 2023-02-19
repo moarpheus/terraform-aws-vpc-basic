@@ -31,7 +31,15 @@ resource "aws_security_group" "default" {
 }
 
 # Availability zones
-
 data "aws_availability_zones" "available" {
   state = "available"
+}
+
+# Private subnet
+resource "aws_subnet" "private_subnet" {
+  vpc_id                  = "${aws_vpc.this.id}"
+  count                   = "${length(var.private_subnets_cidr)}"
+  cidr_block              = "${element(var.private_subnets_cidr, count.index)}"
+  availability_zone       = data.aws_availability_zones.available.names[count.index]
+  map_public_ip_on_launch = false
 }
