@@ -1,4 +1,4 @@
 output "vpc_id" {
   description = "VPC id"
-  value       = "Test here"
+  value = "${aws_vpc.vpc.id}"
 }

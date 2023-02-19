@@ -12,12 +12,12 @@ variable "vpc_cidr" {
 
 variable "enable_dns_hostnames" {
   description = "Enables DNS hosntnames for the VPC"
-  type        = boolean
+  type        = bool
   default     = true
 }
 
 variable "enable_dns_support" {
   description = "Enables DNS support for the VPC"
-  type        = boolean
+  type        = bool
   default     = true
 }
