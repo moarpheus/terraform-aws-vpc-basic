@@ -1,0 +1,16 @@
+{
+  "name": "terraform-aws-vpc-basic",
+  "version": "1.0.0",
+  "private": true,
+  "release": { "branches": [ "main" ] },
+  "description": "Terraform module which creates basic VPC on AWS.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moarpheus/terraform-aws-vpc-basic.git"
+  },
+  "author": "Juris Gribuska",
+  "license": "ISC",
+  "devDependencies": {
+    "semantic-release": "^20.1.0"
+  }
+}
