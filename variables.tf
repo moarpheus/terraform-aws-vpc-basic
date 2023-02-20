@@ -4,12 +4,6 @@ variable "environment" {
   default = "dev"
 }
 
-variable "vpc_name" {
-  description = "Name tag for VPC"
-  type        = string
-  default     = "main"
-}
-
 variable "vpc_cidr" {
   description = "The IPv4 CIDR block for the VPC"
   type        = string
