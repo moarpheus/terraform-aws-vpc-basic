@@ -1,3 +1,9 @@
+variable "environment" {
+  description = "Environment name"
+  type = string
+  default = "dev"
+}
+
 variable "vpc_name" {
   description = "Name tag for VPC"
   type        = string
