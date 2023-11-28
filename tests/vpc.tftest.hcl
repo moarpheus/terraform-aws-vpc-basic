@@ -6,7 +6,7 @@ run "create_vpc" {
 
   # Check that the bucket name is correct
   assert {
-    condition     = aws_vpc.this.id == "dev-vpc"
-    error_message = "Invalid vpc name"
+    condition     = aws_security_group.default.name == "dev-default-sg"
+    error_message = "Invalid SG group name"
   }
 }

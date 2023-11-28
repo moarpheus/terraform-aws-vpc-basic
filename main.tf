@@ -11,7 +11,7 @@ resource "aws_vpc" "this" {
 
 # VPC Default Security Group
 resource "aws_security_group" "default" {
-  name        = "default-sg"
+  name        = "${var.environment}-default-sg"
   description = "Default security group to allow inbound/outbound trafic to/from VPC"
   vpc_id      = aws_vpc.this.id
   depends_on  = [aws_vpc.this]
@@ -56,7 +56,7 @@ resource "aws_subnet" "private_subnet" {
 
 # Elastic IP for NAT
 resource "aws_eip" "nat_eip" {
-  vpc        = true
+  domain   = "vpc"
   depends_on = [aws_internet_gateway.ig]
 
   tags = {
