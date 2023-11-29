@@ -1,4 +1,4 @@
-# Basic AWS VPC Terraform module 
+# AWS VPC Terraform module 
 
 Terraform module which creates basic VPC on AWS with optional public and private subnets.
 
